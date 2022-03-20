@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 //mongoconnect
-mongoose.connect("mongodb://localhost:27017/todolistDB");
+mongoose.connect("mongodb+srv://ankur3176:ankur3176@ankurcluster.xlbji.mongodb.net/todolistDB");
 
 //schemas
 const itemSchema = {
@@ -73,7 +73,7 @@ app.get("/:listname",function(req,res){
         itemsinit: [Item1,Item2,Item3]
       });
       defaultlist.save();   
-      res.redirect("/:listname");  
+      res.redirect("/"+ Name);  
     }
     else{
       res.render("list",{listTitle: element.name, newListItems:element.itemsinit});
@@ -150,6 +150,10 @@ app.get("/about", function (req, res) {
   res.render("about");
 });
 
-app.listen(3000, function () {
-  console.log("Server started on port 3000");
+let port = process.env.PORT;       //this runs our app on the heroku port but when unavailabe we can set our own default port.
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port, function () {
+  console.log("Server started successfully.");
 });
