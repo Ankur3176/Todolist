@@ -1,25 +1,25 @@
 html {
   background-color: #E4E9FD;
-  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+  background-image: -webkit-linear-gradient(65deg, #bde4a3 50%, #ace1eb 50%);
   min-height: 1000px;
   font-family: 'helvetica neue';
 }
 
 h1 {
-  color: #fff;
+  color: rgb(170, 99, 33);
   padding: 10px;
 }
 
 .box {
   max-width: 400px;
   margin: 50px auto;
-  background: white;
+  background: rgb(235, 138, 121);
   border-radius: 5px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
 #heading {
-  background-color: #A683E3;
+  background-color: #bee383;
   text-align: center;
 }
 
@@ -61,7 +61,7 @@ button {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #A683E3;
+  background-color: #ac2744;
   color: #fff;
   font-size: 30px;
   padding-bottom: 6px;
